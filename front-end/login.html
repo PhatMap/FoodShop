@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Login page</title>
+</head>
+<body>
+    <div id="login" class="centered-content">
+        <p><i class="glyphicon glyphicon-user"></i> Username</p>
+        <input type="text" id="userName"><br><br>
+        <p><i class="glyphicon glyphicon-lock"></i> Password</p>
+        <input type="text" id="passWord"><br><br>
+        <button onclick="loginAccount(document.getElementById('userName').value, document.getElementById('passWord').value)">Login</button>
+    </div>
+
+    <script>
+        function loginAccount(userName, passWord){
+            if(userName == "p" && passWord == "p"){
+                window.location.href= "home.html";
+            }
+        }
+    </script>
+</body>
+</html>
