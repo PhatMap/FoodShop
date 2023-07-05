@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios';
 import { useEffect } from 'react';
+import Login from './Login';
 
 class App extends React.Component{
   constructor(props){
@@ -20,11 +21,10 @@ class App extends React.Component{
     this.callPosts();
   }
 
-
 render() {
   return (
     <div className="App">
-      <p>Hello {this.state.postRouter}</p>
+      <Login hat={this.state.postRouter} ></Login>
     </div> 
   );
 }
