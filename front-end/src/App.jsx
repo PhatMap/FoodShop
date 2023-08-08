@@ -1,32 +1,30 @@
 import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import axios from 'axios';
-import { useEffect } from 'react';
-import Login from './Login';
+import { useEffect } from 'react'
+import Login from './Components/Login'
+import Home from './Components/Home'
+import About from './Components/About'
+import Register from './Components/Register'
+import Navbar from './Components/Navbar'
+import { Route, Routes } from 'react-router-dom'
 
 class App extends React.Component{
   constructor(props){
     super(props);
     this.state={postRouter: ""};
   }
-  callPosts(){
-    fetch("http://localhost:8080/posts")
-    .then(res => res.text())
-    .then(res => this.setState({postRouter: res}));
-  }
-
-  componentWillMount(){
-    this.callPosts();
-  }
 
 render() {
   return (
     <div className="App">
-      <Login hat={this.state.postRouter} ></Login>
+      <Navbar ></Navbar>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/register' element={<Register/>}/>
+      </Routes>
     </div> 
-  );
+  )
 }
 }
 
