@@ -5,6 +5,7 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Register from './Components/Register'
 import Navbar from './Components/Navbar'
+import Popup from './Components/Popup'
 import { Route, Routes } from 'react-router-dom'
 
 class App extends React.Component{
